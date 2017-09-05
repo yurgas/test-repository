@@ -8,15 +8,11 @@ pipeline {
     }
     stage('Test') {
       parallel (
-        unit_test: {
-           steps {
+        'unit_test': {
              echo 'Unit Test'
-           }
         },
-        code_analisis: {
-          steps {
+        'code_analisis': {
             echo 'Code Analisis'
-          }
         }
       )
     }
