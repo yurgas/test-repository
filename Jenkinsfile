@@ -7,6 +7,7 @@ pipeline {
       }
     }
     stage('Test') {
+      steps {
       parallel (
         'unit_test': {
              echo 'Unit Test'
@@ -15,6 +16,7 @@ pipeline {
             echo 'Code Analisis'
         }
       )
+      }
     }
     stage('Deploy') {
       steps {
