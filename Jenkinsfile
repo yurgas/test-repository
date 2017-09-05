@@ -7,10 +7,18 @@ pipeline {
       }
     }
     stage('Test') {
-      steps {
-        echo 'Test'
-      }
-    }
+      parallel (
+        'unit_test' {
+           steps {
+             echo 'Unit Test'
+           }
+        }
+        'code_analisis' {
+          steps {
+            echo 'Code Analisis'
+          }
+        }
+      )
     stage('Deploy') {
       steps {
         echo 'Deploy Step 1'
