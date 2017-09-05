@@ -12,7 +12,7 @@ pipeline {
            steps {
              echo 'Unit Test'
            }
-        }
+        },
         code_analisis: {
           steps {
             echo 'Code Analisis'
