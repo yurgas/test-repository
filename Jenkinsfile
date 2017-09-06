@@ -1,27 +1,30 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Stage 1') {
       steps {
-        echo 'Build'
+        echo 'Step 1'
+        echo 'Step 2'
       }
     }
-    stage('Test') {
+    stage('Stage 2') {
       steps {
       parallel (
-        'unit_test': {
-             echo 'Unit Test'
+        'step 1': {
+             echo 'Step 1'
         },
-        'code_analisis': {
-            echo 'Code Analisis'
+        'step 2': {
+            echo 'Step 2'
+        },
+        'step 3': {
+            echo 'Step 3'
         }
       )
       }
     }
-    stage('Deploy') {
+    stage('Stage 3') {
       steps {
-        echo 'Deploy Step 1'
-        echo 'Deploy Step 2'
+        echo 'Step 1'
       }
     }
   }
