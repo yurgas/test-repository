@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Step 1'
         echo 'Step 2'
-        echo 'Fix job'
+        echo 'branch test3'
       }
     }
     stage('Stage 2') {
