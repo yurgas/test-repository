@@ -6,7 +6,7 @@ pipeline {
         echo 'Step 1'
         echo 'Step 2'
         echo 'branch test12_3'
-        eee
+        echo sh(returnStdout: true, script: 'env')
       }
     }
     stage('Stage 2') {
