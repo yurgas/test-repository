@@ -6,6 +6,7 @@ pipeline {
         echo 'Step 1'
         echo 'Step 2'
         echo 'branch test12_3'
+        eee
       }
     }
     stage('Stage 2') {
