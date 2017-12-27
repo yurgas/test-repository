@@ -13,7 +13,7 @@ pipeline {
       steps {
       parallel (
         'step 1': {
-             echo 'Step 1'
+             sh 'git diff --name-only master'
         },
         'step 2': {
             echo 'Step 2'
