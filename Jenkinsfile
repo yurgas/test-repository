@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'Step 1'
         echo 'Step 2'
-        echo 'branch test12_3'
+        echo 'branch test13'
         echo sh(returnStdout: true, script: 'env')
       }
     }
